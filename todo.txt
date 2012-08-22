@@ -29,8 +29,8 @@ Notes:
 - NodeUnit default reporter has minor display issue on Windows
 
 Fork Notes:
-- My package manager has node 0.8.5 installed and I don't want
-to install a manually managed node
+- My package manager has node 0.8.5 installed and I don't want to install a 
+manually managed node, windows installer is already at 0.8.8
 
 - looks like the issue w/ nodeunit check marks is probably just an issue with
 terminal font in windows, similar result using MS consolas font in linux
@@ -45,6 +45,8 @@ terminal font in windows, similar result using MS consolas font in linux
   our workflow evolve
 
 - usages: npm test; npm run-script jake; npm run-script integrate
+
+- jake.sh and jake.bat are no longer needed
 
 - using engineStrict would cause install to fail similar to current behavior,
   however the npm website has a stern warning about doing this needlessly
