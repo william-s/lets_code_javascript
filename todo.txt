@@ -14,11 +14,12 @@ User Stories:
 - marketing copy
 
 Engineering Tasks:
-* Create a very simple HTTP server
+* Serve a file
 
 To Do on current task:
-- Modify build script to enforce Node version
-- Integrate
+- decide if it is worth using engineStrict
+- figure out how to check for node version during integration using package.json
+- clean up current version test in package.json
 
 Future ideas:
 - Create 'fail fast' assertion code
@@ -26,3 +27,27 @@ Future ideas:
 
 Notes:
 - NodeUnit default reporter has minor display issue on Windows
+
+Fork Notes:
+- My package manager has node 0.8.5 installed and I don't want to install a 
+manually managed node, windows installer is already at 0.8.8
+
+- looks like the issue w/ nodeunit check marks is probably just an issue with
+terminal font in windows, similar result using MS consolas font in linux
+
+- Running npm init, picking v 0.0.16 for episode fork
+
+- npm semver's ~1.2.3 := >=1.2.3 <1.3.0
+
+- update package json: set engine version and some sample scripts.
+
+- sample scripts are some what repeatative but might be useful as project and
+  our workflow evolve
+
+- usages: npm test; npm run-script jake; npm run-script integrate
+
+- jake.sh and jake.bat are no longer needed
+
+- using engineStrict would cause install to fail similar to current behavior,
+  however the npm website has a stern warning about doing this needlessly
+  see: https://npmjs.org/doc/json.html
