@@ -43,7 +43,8 @@
 
 //	desc("Ensure correct version of Node is present");
 	task("node", [], function() {
-		var NODE_VERSION = "v0.8.6";
+    //TODO fix this version number, remove or change test to use package.json
+		var NODE_VERSION = "v0.8.5"; //hardcode version change for now to test local integration
 
 		sh("node --version", function(stdout) {
 			if (stdout.trim() !== NODE_VERSION) fail("Incorrect node version. Expected " + NODE_VERSION + ".");
