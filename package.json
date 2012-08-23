@@ -1,17 +1,17 @@
 {
   "name": "lets_code_javascript",
-  "version": "0.0.16",
+  "version": "0.0.19",
   "description": "Source code for Let's Code: Test-Driven Javascript",
   "main": "node src/server/server.js",
   "dependencies": {
-    "jake": "~0.3.7"
   },
   "devDependencies": {
-    "nodeunit": "~0.7.4",
-    "jshint": "~0.7.1"
+    "jake": "~0.3.7",
+    "jshint": "~0.7.1",
+    "nodeunit": "~0.7.4"
   },
   "engines" : {
-    "node" : "~0.8.4"
+    "node" : "~0.8.6"
   },
   "scripts": {
     "integrate": "jake integrate",

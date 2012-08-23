@@ -19,9 +19,11 @@ Engineering Tasks:
 - design work?
 
 To Do on current task:
-- decide if it is worth using engineStrict
-- figure out how to check for node version during integration using package.json
-- clean up current version test in package.json
+- how to use npm to test dependencies?
+    - implement simple checkEngine (see https://github.com/isaacs/npm/blob/master/lib/install.js)
+    - or simply use npm install as part of testing or integration script
+- clean up notes 
+- send pull request or message
 
 Future ideas:
 - Create 'fail fast' assertion code
@@ -31,11 +33,16 @@ Notes:
 - NodeUnit default reporter has minor display issue on Windows
 
 Fork Notes:
-- My package manager has node 0.8.5 installed and I don't want to install a 
-manually managed node, windows installer is already at 0.8.8
+- My package manager has node 0.8.5 installed and I don't
+want to install a manually managed node, windows installer is already
+at 0.8.8 (looks like most linux distros with a 0.8.x package are on .4
+or .5 still, something to consider)
 
-- looks like the issue w/ nodeunit check marks is probably just an issue with
-terminal font in windows, similar result using MS consolas font in linux
+- package.json will also allow you to share code via npm if desired
+
+- looks like the issue w/ nodeunit check marks is probably just an issue
+with terminal font in windows, similar result using MS consolas font
+in linux
 
 - Running npm init, picking v 0.0.16 for episode fork
 
@@ -43,13 +50,19 @@ terminal font in windows, similar result using MS consolas font in linux
 
 - update package json: set engine version and some sample scripts.
 
-- sample scripts are some what repeatative but might be useful as project and
-  our workflow evolve
+- sample scripts are some what repetitive but might be useful as
+project and our work flow evolve
 
 - usages: npm test; npm run-script jake; npm run-script integrate
 
 - jake.sh and jake.bat are no longer needed
 
-- using engineStrict would cause install to fail similar to current behavior,
-  however the npm website has a stern warning about doing this needlessly
-  see: https://npmjs.org/doc/json.html
+- using engineStrict in package json would enforce similar behavior to
+previous node version check however the npm website has a stern warning
+about doing this needlessly see: https://npmjs.org/doc/json.html
+
+- to enforce proper version with npm use npm set config engineSrict:
+true on integration box
+
+- left package.json engine version as ~0.8.6: 0.9 is unstable and 1.0
+is likely to have breaking changes, will only issue a warning
