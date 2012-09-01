@@ -64,5 +64,9 @@ about doing this needlessly see: https://npmjs.org/doc/json.html
 - to enforce proper version with npm use npm set config engineSrict:
 true on integration box
 
-- left package.json engine version as ~0.8.6: 0.9 is unstable and 1.0
-is likely to have breaking changes, will only issue a warning
+- I left package.json engine version as ~0.8.6. 0.9 is unstable and 1.0 is
+likely to have breaking changes. This will only issue a warning by default
+
+- Having npm handle the dev dependencies based on project json is a good
+idea because if anyone runs npm update they may bring in breaking changes.
+Now it should just be bug fixes
