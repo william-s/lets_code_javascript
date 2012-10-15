@@ -12,11 +12,13 @@ User Stories:
 * Publish to Internet
 
 Engineering Tasks:
+- Fix DNS
 
 To Do on current task:
 - how to use npm to test dependencies?
     - implement simple checkEngine (see https://github.com/isaacs/npm/blob/master/lib/install.js)
     - or simply use npm install as part of testing or integration script
+- update notes for new upstream changes
 - clean up notes 
 - send pull request or message
 
@@ -27,6 +29,9 @@ Future ideas:
 - Handle errors properly in server.js
 - server.stop() waits for open connections to close (e.g., Firefox keeps open connection).
   Make it forcibly close?
+- Remove Node version duplication between package.json and Jakefile.js
+- Fix httpGet duplication
+- Use NPM to pull in and build/install heroku tools
 
 Notes:
 - NodeUnit default reporter has minor display issue on Windows
@@ -42,8 +47,6 @@ or .5 still, something to consider)
 - looks like the issue w/ nodeunit check marks is probably just an issue
 with terminal font in windows, similar result using MS consolas font
 in linux
-
-- Running npm init, picking v 0.0.16 for episode fork
 
 - npm semver's ~1.2.3 := >=1.2.3 <1.3.0
 

@@ -1,6 +1,6 @@
 {
-  "name": "lets_code_javascript",
-  "version": "0.0.19",
+  "name": "weewikipaint",
+  "version": "0.0.1",
   "description": "Source code for Let's Code: Test-Driven Javascript",
   "main": "node src/server/server.js",
   "dependencies": {
@@ -11,7 +11,8 @@
     "nodeunit": "~0.7.4"
   },
   "engines" : {
-    "node" : "~0.8.6"
+    "node" : "~0.8.6",
+    "npm": "1.1.x"
   },
   "scripts": {
     "integrate": "jake integrate",
