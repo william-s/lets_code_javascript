@@ -1,26 +1,35 @@
 WeeWikiPaint
 
 Minimum Marketable Features:
-* marketing home page
-- collaborative painting page (very basic)
+* single-user painting on home page
+- collaborative painting
 - wiki-fy the pages
 - more complex painting?
 - more collaborative features?
 
 User Stories:
-> Marketing copy
-* Publish to Internet
+* Draw a line in response to user mouse
+- Draw a line in response to iOS touch
+- Draw multiple lines / follow the drag
+- Minify and deploy
 
 Engineering Tasks:
-- Fix DNS
+- Finish fork objectives
+- Merge changes & share
+- Smoke test to ensure that our magic div is in our actual home page
 
 To Do on current task:
 - how to use npm to test dependencies?
     - implement simple checkEngine (see https://github.com/isaacs/npm/blob/master/lib/install.js)
     - or simply use npm install as part of testing or integration script
-- update notes for new upstream changes
 - clean up notes 
-- send pull request or message
+- Update objectives remaining for fork
+- update notes for new upstream changes
+- Update tasks to finish objectives
+=======
+- Factor out common initialization code?
+- Convert 'client' to be proper object rather than global singleton?
+- Modify Lint settings for client global variables
 
 Future ideas:
 - Fix package.json dependancies and shrinkwrap them
@@ -34,6 +43,11 @@ Future ideas:
 - Remove Node version duplication between package.json and Jakefile.js
 - Fix httpGet duplication
 - Use NPM to pull in and build/install heroku tools
+- Automated npm rebuild ('npm rebuild' in jake.sh / jake.bat if .bin directory not found.)
+- Ensure that every browser has same of number of tests running
+- Automatically start Testacular (or provide friendlier error message when it isn't running?)
+- Automate CI script
+- Resolve npm 'extraneous' warning (due to package.json not reflecting what's in node_modules)
 
 Notes:
 - NodeUnit default reporter has minor display issue on Windows
