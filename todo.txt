@@ -23,6 +23,8 @@ To Do on current task:
 - send pull request or message
 
 Future ideas:
+- Fix package.json dependancies and shrinkwrap them
+- Figure out and write better p[ractices for using package.json for dependencies reply to comments in ll5.mp4
 - Create 'fail fast' assertion code
 - Abstract test framework? (Swap out a different framework to make sure abstraction works)
 - Static checking of function parameters (rather than writing tests)
